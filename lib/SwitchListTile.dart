@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shared_preferences_test_app/text_set.dart';
 
 class NextPage extends StatefulWidget {
   const NextPage({Key? key}) : super(key: key);
@@ -10,7 +10,6 @@ class NextPage extends StatefulWidget {
 }
 
 class _NextPageState extends State<NextPage> {
-
   var _switch1 = false;
   var _switch2 = false;
   var _switch3 = false;
@@ -39,16 +38,16 @@ class _NextPageState extends State<NextPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pref Test'),
+        title: const Text('Pref Test'),
       ),
       body: Container(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Center(
           child: Column(
-            children: <Widget>[
+            children: [
               SwitchListTile(
                 value: _switch1,
-                title: Text('Setting 1'),
+                title: const Text('Setting 1'),
                 onChanged: (bool value) {
                   setState(() {
                     _switch1 = value;
@@ -58,7 +57,7 @@ class _NextPageState extends State<NextPage> {
               ),
               SwitchListTile(
                 value: _switch2,
-                title: Text('Setting 2'),
+                title: const Text('Setting 2'),
                 onChanged: (bool value) {
                   setState(() {
                     _switch2 = value;
@@ -68,7 +67,7 @@ class _NextPageState extends State<NextPage> {
               ),
               SwitchListTile(
                 value: _switch3,
-                title: Text('Setting 3'),
+                title: const Text('Setting 3'),
                 onChanged: (bool value) {
                   setState(() {
                     _switch3 = value;
